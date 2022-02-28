@@ -1,22 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package javaapplication13;
 
-/**
- *
- * @author joshu
- */
 public class Login extends javax.swing.JFrame {
 
-    //caracteristica o atributos de la ventana 
+  
     Usuario usuarios[];
     
-    /**
-     * Creates new form Login
-     * metodo constructor de la ventana
-     */
+    
     public Login(Usuario usuarios[]) {
         this.usuarios = usuarios;
         initComponents();
@@ -118,34 +108,31 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    // del boton login o el boton enter
+
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
+      
         String usuario;
         String password;
         int dpi;
-        // obteniendo valores de txt 
+     
         usuario = txtUsser.getText();
         password = txtPassword.getText();
-        // casteo de variables 
-//        dpi = Integer.parseInt(txtPassword.getText());
-        //
-        //prueba por consola y comparacion 
+       
         for(int i=0; i<usuarios.length;i++){
             if(usuarios[i] != null){
-                // hasta que tanto password y usser sean iguales
+                
                 if(usuarios[i].getNombreUsuario().equals(usuario) && 
                         usuarios[i].getPassword().equals(password)){
-                    System.out.println("Bienvenido!!!!!");
+                    System.out.println("Bienvenido");
                     System.out.println(usuarios[i].getNombreUsuario());
                     System.out.println(usuarios[i].getApellidoUsuario());
-                    System.out.println(usuarios[i].getDpi());
-                    //llamo a otra ventana
+                  
+                   
                     ventana2 inicio = new ventana2(usuarios[i].getNombreUsuario(),usuarios);
                     inicio.setVisible(true);
                     break;                    
                 } else {
-                    System.out.println("El usuario no exite");
+                    System.out.println("El usuario no existe");
                     break;
                 }  
             }    

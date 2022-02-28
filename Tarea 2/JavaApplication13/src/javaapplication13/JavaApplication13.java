@@ -1,26 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package javaapplication13;
-
-/**
- *
- * @author joshu
- */
 public class JavaApplication13 {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
         
-        // creando mi almacenamiento para mis usuarios
-        Usuario[] usuarios = new Usuario[10];
+        Usuario[] usuarios = new Usuario[50];
         
-        // usuario por defecto creado - Administrador
-        // colocado en la primera posicion del arreglo
+     
         usuarios[0] = new Usuario(0,"Juan Pedro","Valle Lema","202101648");
                
         Login login = new Login(usuarios);

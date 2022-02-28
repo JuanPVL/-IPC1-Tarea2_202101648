@@ -1,46 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package javaapplication13;
 
-/**
- *
- * @author joshu
- */
 public class ventana2 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ventana2
-     */
+
     String nombre;
     Usuario usuarios[];
     
-    // constructor
+   
     public ventana2(String nombre,Usuario usuarios[]) {
         this.nombre = nombre;  
         this.usuarios = usuarios;
-        initComponents();//metod propio de la ventana
+        initComponents();
         lbNombre.setText(this.nombre);
         infoUsuarios();
     }
 
     
-    // metodo para mostrar la informacion en una tabla
+   
     public void infoUsuarios(){
-        //matriz para los usuarios
+        
         String matriz[][] = new String[usuarios.length][3];
-        //llenado de informacion de mi matriz
+        
         for(int i=0;i<usuarios.length;i++){
             if(usuarios[i]!=null){
-                //casteo de informacion de int a string valueOf()
+                
                 matriz[i][0] = String.valueOf(usuarios[i].getPassword());
                 matriz[i][1] = usuarios[i].getNombreUsuario();
                 matriz[i][2] = usuarios[i].getApellidoUsuario();
             }            
         }
         
-        // aca paso mi informacion a mi tabla
+       
         TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             matriz,
             new String [] {

@@ -1,42 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package javaapplication13;
 
-/**
- *
- * @author joshu
- */
+
 public class Usuario {
-    //atributos o caracteristicas
-    int dpi;
+   
+  
     String nombreUsuario;
     String apellidoUsuario;
-    int rol;// 0 = admi , 1 = usuario normal
-    String password;
-    
-    // constructor
-    // ( parametro1, parametro2, parametro3 )
+      String password;
+ 
     Usuario(int dpi,String nombreUsuario, String apellidoUsuario, String password){
-        this.dpi = dpi;
+      
         this.nombreUsuario = nombreUsuario;
         this.apellidoUsuario = apellidoUsuario;
         this.password = password;
     }
     
-    
-    // funciones y metodos
-     
-    // get y set
 
-    public int getDpi() {
-        return dpi;
-    }
 
-    public void setDpi(int dpi) {
-        this.dpi = dpi;
-    }
+   
 
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -54,14 +36,7 @@ public class Usuario {
         this.apellidoUsuario = apellidoUsuario;
     }
 
-    public int getRol() {
-        return rol;
-    }
-
-    public void setRol(int rol) {
-        this.rol = rol;
-    }
-
+   
     public String getPassword() {
         return password;
     }
